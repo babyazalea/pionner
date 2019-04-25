@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>fullpage</title>
+        <style>
+            *{margin:0; padding:0;}
+            h2{
+                font-size:100px;
+            }
+            .box{
+                width:200px;
+                height:200px;
+                position:absolute;
+                top:400px;
+                left:300px;
+                background-color:#000;
+                opacity: 0;
+                transform: scale(1);
+                transition:all 1s;
+            }
+            .box.on{
+                transform: scale(2);
+                opacity: 1;
+            }
+        </style>
+        <link rel="stylesheet" href="js/fullpage.css">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/fullpage.min.js"></script>
+        <script>
+            /*
+            fullpage.js는 기본적으로 자체 슬라이드를 지원한다.
+            div class="slide"라고 써주기만 하면 해당 div가 slide화 된다.
+            */
+            $(document).ready(function(){
+                
+                var bg=['red','blue','gold','orange','forestgreen'];
+                    
+                $('#fullpage').fullpage({
+                    verticalCentered:false,
+                    //풀페이지 가로정렬 속성을 해제
+                    sectionsColor:bg,
+                    //섹션별 색상을 배열변수를 이용하여 적용
+                    navigation:true,
+                    //pager 생성
+                    navigationTooltips:bg,
+                    //페이저 옆에 텍스트 툴팁을 생성
+                    easing:'linear',
+                    //이징 효과 가능
+                    dragAndMove:true,
+                    //모바일에서 터치로 섹션 이동 가능
+                    
+                    };
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <div id="fullpage">
+            <div class="section">
+                <h2>red</h2>
+            </div>
+            <div class="section">
+                <h2>blue</h2>
+                <div class="slide">1</div>
+                <div class="slide">2</div>
+                <div class="slide">3</div>
+                <div class="slide">4</div>
+                <div class="slide">5</div>
+            </div>
+            <div class="section">
+                <h2>gold</h2>
+                <div class="box"></div>
+            </div>
+            <div class="section">
+                <h2>orange</h2>
+            </div>
+            <div class="section">
+                <h2>forestgreen</h2>
+            </div>
+        </div>
+    </body>
+</html>

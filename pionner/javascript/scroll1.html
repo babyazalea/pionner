@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>scroll</title>
+        <style>
+            body{
+                height:6000px;
+                position:relative;
+            }
+            .top{
+                position:fixed;
+                bottom:20px;
+                right:20px;
+                width:40px;
+                height:40px;
+                background-color:#333;
+                color:#fff;
+                text-align:center;
+                line-height:40px;
+            }
+            a{
+                color:inherit;
+            }
+            #go{
+                height:50px;
+                background-color:#f06;
+                width:100%;
+                position:absolute;
+                bottom:1200px;
+            }
+        </style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.top').on('click',function(){
+                    $('html, body').animate({
+                        'scrollTop':0
+                    },1400)
+                })    
+            });
+        </script>
+    </head>
+    <body>
+        <div id="go"></div>
+        
+        <div class="top">
+            <a href="#go">top</a>
+        </div>
+    </body>
+</html>

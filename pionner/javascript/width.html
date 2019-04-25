@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>widht</title>
+        <style>
+            hody{height:4000px;}
+            .box1{
+                width:222px;
+                height:565px;
+                background-color:red;
+            }
+            .box2{
+                width:463px;
+                height:300px;
+                background-color:bisque;
+            }
+            .box3{
+                width:122px;
+                height:80px;
+                background-color:crimson;
+            }
+            .box4{
+                width;333px;
+                height:555px;
+                background-color:blue;
+            }
+            .box5{
+                width:200px;
+                height:600px;
+                background-color:forestgreen;
+            }
+        </style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            /*
+            width() 너비값을 구하거나, 수정.
+            */
+            $(document).ready(function(){
+               /*var a=$('.box1').width();
+               console.log(a);
+               $('.box1').width(333);*/ 
+                
+               
+                $('div').on('click',function(){
+                    var a=$(this).width();
+                    var b=$(this).height();
+                    $(this).width(b).height(a);
+                });
+                
+                /*var wid1=$('.box1').width();
+                var hig1=$('.box1').height();
+                var txt1='높이:'+wid1+'px<br>너비:'+hig1+'px'         
+                    $('.box1').html(txt1);
+                
+                var wid2=$('.box2').width();
+                var hig2=$('.box2').height();
+                var txt2='높이:'+wid2+'px<br>너비:'+hig2+'px'         
+                    $('.box2').html(txt2);*/
+                
+                $('div').each(function(){
+                    var divWidth=$(this).width();
+                    var divHeight=$(this).height();
+                    var txt='너비:'+divWidth+'px<br>높이:'+divHeight+'px'         
+                    $(this).html(txt);
+                })
+                
+                
+                });
+        </script>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </body>
+</html>

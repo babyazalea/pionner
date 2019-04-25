@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>accordion menu</title>
+        <style>
+            body{
+                height:4000px;
+            }
+            ::-webkit-scrollbar{
+                width:5px;
+                border-radius:10px;
+            }
+            ::-webkit-scrollbar-track{
+                background-color:antiquewhite;
+            }
+            ::-webkit-scrollbar-thumb{
+                background-color:aqua;
+            }
+            ::-webkit-scrollbar-button{
+                display:none;
+            }
+            /*
+                -webkit- 사파리, 크롬
+                -mo- 파이어폭스
+                -ms- 인터넷 익스플로러, 엣지
+                -o- 오페라
+            */
+            
+            *{
+                margin:0;
+                padding:0;
+                list-style:none;
+            }
+            p{
+                padding-left:15px;
+                border-bottom:1px solid #ccc;
+                border-left:8px solid #ccc;
+                position:relative;
+            }
+            p .arr{
+                position:absolute;
+                top:0;
+                right:3px;
+            }
+            
+            li.on .sub{
+                height:145px;
+            }
+            li.on p{
+                background-color:gold;
+            }
+            li.on .arr{
+                transform:rotate(-180deg);
+            }
+            .sub{
+                transition:all 0.8s;
+                height:0;
+                overflow:hidden;
+            }
+            .sub li{
+                line-height:28px;
+                border-bottom:1px solid #ccc;
+                text-indent:28px;
+            }
+        </style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            //$(선택자).ready(); 준비가 되었을 때
+            $(document).ready(function(){
+                $('p').on('click',function(){
+                          $(this).parent().toggleClass('on').siblings().removeClass('on');
+                          });
+            });//오프닝구문, 페이지의 로드가 끝났을 때 실행.
+            /*
+                jQuery(document).ready(function(){});
+                $(function(){});
+                
+                ------------------------
+                javascript ver.
+                window.onload=function(){///}
+            */
+        </script>
+    </head>
+    <body>
+        <ul id="menu">
+            <li>
+                <p>list1
+                <span class="arr">▼</span></p>
+                    <ul class="sub">
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                        <li>item4</li>
+                        <li>item5</li>
+                    </ul>
+            </li>
+            <li>
+                <p>list2
+                <span class="arr">▼</span></p>
+                    <ul class="sub">
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                        <li>item4</li>
+                        <li>item5</li>
+                    </ul>
+            </li>
+            <li>
+                <p>list3
+                <span class="arr">▼</span></p>
+                    <ul class="sub">
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                        <li>item4</li>
+                        <li>item5</li>
+                    </ul>
+            </li>
+            <li>
+                <p>list4
+                <span class="arr">▼</span></p>
+                    <ul class="sub">
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                        <li>item4</li>
+                        <li>item5</li>
+                    </ul>
+            </li>
+            <li>
+                <p>list5
+                <span class="arr">▼</span></p>
+                    <ul class="sub">
+                        <li>item1</li>
+                        <li>item2</li>
+                        <li>item3</li>
+                        <li>item4</li>
+                        <li>item5</li>
+                    </ul>
+            </li>
+        </ul>
+    </body>
+</html>

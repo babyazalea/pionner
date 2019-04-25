@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>형변환</title>
+    </head>
+    <body>
+        <script>
+            /*var a= prompt('아무말대잔치');
+            var b= typeof(a);
+            console.log(b);*/
+                //typeof(); 괄호 안의 대상의 데이터 형태를 검사.
+            
+            var b= '234';
+            console.log(typeof(b));
+                b= Number(b);
+            console.log(typeof(b));
+                b= parseInt(b);
+            console.log(typeof(b));
+            
+            /*
+            모든 데이터의 형태를 숫자로 변환하는 명령어:
+            parseInt() : 소수점자리 제거/변환할 값 중 앞자리 자연수를 제외한 나머지를 제거.
+            Number() : 소수점자리까지 살려둠.
+            */
+            
+            var c= prompt('키를 입력해주세요');
+                c= parseInt(c);
+                console.log(c);
+            if(c>150 && c<170){
+                console.log('pass');
+            }else{
+                console.log('fail');
+            }
+            
+            /*
+            모든 데이터의 형태를 문자형으로 변환하는 명령어:
+            String()
+            ex) 1+2+3+4 --> '1234'
+            */
+        </script>
+    </body>
+</html>

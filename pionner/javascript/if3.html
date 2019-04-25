@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>if3</title>
+    </head>
+    <body>
+        <script>
+            /*
+                1.첫번째 if문
+                if(비교식){
+                비교식이 참일 때 실행
+                }
+                
+                2.두번째 if문
+                if(비교식){
+                비교식이 참일 때 실행
+                }else{비교식이 거짓일 때 실행}
+                
+                3.세번째 if문
+                if(첫번째 비교식){
+                비교식이 참일 때 실행
+                }else if(두번째 비교식){
+                비교식이 참일 때 실행
+                }else if...
+                else{
+                위의 모든 비교식들이 다 false일 때 실행될 최종 실행 구문.
+                }
+            */
+            
+            /*var local= prompt('당신은 어느 지역에 살고 있습니까?');
+            var result;
+            if(local=='부산'){
+                result= '2시간 거리입니다.';
+            }else if(local=='울산'){
+                result= '2시간 30분 거리입니다'
+            }else if(local=='양산'){
+                result= '3시간 거리입니다';
+            }else{
+                result= '참가하실 수 없습니다';
+            }
+            
+            document.write(result);*/
+            
+            /*var month= prompt('지금은 몇 월입니까?')
+            var result;
+            if(month>=3 && month<=5){
+                result= '봄입니다.';
+            }else if(month>=6 && month<=8){
+                result= '여름입니다.';
+            }else if(month>=9 && month<=11){
+                result= '가을입니다.';
+            }else if(month==12 || month==2 || month==1){
+                result= '겨울입니다.';
+            }
+            alert(result);*/
+            
+            var weight= prompt('당신의 체중은?');
+            var height= prompt('당신의 키는?');
+            
+            var result= (height-100)*0.9;
+            var result2;
+            
+            if(weight>=(result*1.2)){
+                result2= '과체중입니다.';
+            }else if(weight<=(result*0.7)){
+                result2= '저체중입니다';
+            }else if(weight<=(result*0.9)){
+                result2= '미용체중입니다'
+            }else{
+                result2= '정상체중입니다'
+            }
+            document.write(result2);
+        </script>
+    </body>
+</html>

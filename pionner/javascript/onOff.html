@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>onOff</title>
+        <style>
+            .box{
+                width:200px;
+                height:200px;
+                border:4px solid #000;
+                margin:40px auto;
+            }
+            .txt{
+                outline-color:#1dffff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <input type="text" placeholder="클릭해주세요!!" class="txt">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            var onOff=false;
+            
+            $('.box').on('click',function(){
+                
+                onOff=!onOff
+              if(onOff==true){  
+                $(this).css({
+                    'backgroundColor':'#f06'
+                });
+                }else{
+                    $(this).css({
+                        'backgroundColor':''
+                    });
+                };
+            });
+            
+            /*$('.txt').on('click',function(){
+                onOff=!onOff
+                if(onOff==true){
+                    $(this).css({
+                        'width':'120px'
+                    });
+                }else{
+                    $(this).css({
+                        'width':'80px'
+                    });
+                };
+            });*/
+            
+            $('.txt').on('focus',function(){
+                $(this).animate({
+                    'width':'200px'
+                });
+            }).on('blur',function(){
+                $(this).animate({
+                    'width':'100px'
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ex3</title>
+        <style>
+            *{margin:0; padding:0;}
+            ul{
+                list-style:none;
+            }
+            .wrap{
+                width:100%;
+                height:100vh;
+                background-color:deeppink;
+                padding-top:40px;
+                box-sizing:border-box;
+            }
+            .box{
+                width:600px;
+                height:450px;
+                background-color:rgba(0,0,0,0.2);
+                margin:0 auto;
+                border:3px solid #000;
+                text-transform:uppercase;
+                text-align:center;
+                line-height:450px;
+                font-weight:900;
+                font-size:60px;
+            }
+            .menu{
+                text-align:center;
+                margin-top:40px;
+                font-size:0;
+            }
+            .menu li{
+                font-size:14px;
+                margin:0 10px;
+                width:140px;
+                height:42px;
+                line-height:42px;
+                text-align:center;
+                background-color:rgba(255,255,255,0.6);
+                border-radius:10px;
+                display:inline-block;
+            }
+        </style>
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $('.menu li').on('click',function(){
+                   var color=$(this).text();
+                   $('.wrap').css({
+                        'backgroundColor':color
+                   });
+                   $('.box').text(color);
+                   $(this).css({
+                       'color':'#fff',
+                       'backgroundColor':'#000'
+                   }).siblings().css({
+                       'color':'#000',
+                       'backgroundColor':'#fff'
+                   });
+               });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="box"></div>
+            <ul class="menu">
+                <li>deeppink</li>
+                <li>red</li>
+                <li>blue</li>
+                <li>gold</li>
+                <li>forestgreen</li>
+                <li>white</li>
+            </ul>
+        </div>
+    </body>
+</html>

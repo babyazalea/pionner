@@ -1,0 +1,167 @@
+@charset 'utf-8';
+
+@import url('https://fonts.googleapis.com/css?family=Bungee|Noto+Serif+KR');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+
+.wrap{
+    width:960px;
+    margin:0 auto;
+}
+
+/*-----------------main----------------*/
+
+#wrap{}
+
+header{
+    width:100%;
+    height:150px;
+    
+}
+header .wrap{
+    position: relative;
+}
+.title{
+    position:relative;
+    display:block;
+    width:250px;
+    height:65px;
+    line-height:150px;
+}
+.titleEng{
+    position:absolute;
+    top:65px;
+    font-family:Bungee;
+    font-size:50px;
+    opacity:1;
+    transition:all 1.5s;
+    line-height:0;
+}
+.titleKor{
+    position:absolute;
+    top:70px;
+    font-family:Black Han Sans;
+    font-size:50px;
+    letter-spacing:8px;
+    opacity:0;
+    transition:all 1.5s;
+    line-height:0;
+}
+.title:hover .titleKor{
+    opacity:1
+}
+.title:hover .titleEng{
+    opacity:0;
+}
+
+.toggle{
+    position: relative;
+    right:-700px;
+    
+}
+.toggle>div{
+    
+}
+.toggleBg{
+    width:300px;
+    height:30px;
+    border:1px solid #000;
+    border-radius: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left:-130px;
+    overflow: hidden;
+    z-index: -999;
+}
+.toggleBtn{
+    font-size:50px;
+    border-radius: 10px;
+    position:absolute;
+    overflow: hidden;
+}
+.toggleBtn i{
+    padding-right: 100px;
+    box-sizing: border-box;
+    z-index: 999;
+}
+.toggleBgLeft{
+    float:left;
+    height:100%;
+    width:50%;
+    background:red;
+}
+.toggleBgRight{
+    float:right;
+    width:50%;
+    height:100%;
+    background:blue;
+}
+
+.mainVisual{
+    height:600px;
+    width:960px;
+}
+
+.block{
+    display:block;
+    width:192px;
+    height:200px;
+    float:left;
+    box-shadow:0 0 30px rgba(0, 0, 0, 0.2);
+}
+.block5, .block15, .block10{
+    margin-right:0;
+}
+
+.block1{
+    background:url(../img/tec01.png) no-repeat center;
+}
+.block2{
+    background:url(../img/tec02.png) no-repeat center;
+}
+.block3{
+    background:url(../img/tec03.png) no-repeat center;
+}
+.block4{
+    background:url(../img/tec04.png) no-repeat center;
+}
+.block5{
+    background:url(../img/tec05.png) no-repeat center;
+}
+.block6{
+    background:url(../img/tec06.png) no-repeat center;
+}
+.block7{
+    background:url(../img/tec07.png) no-repeat center;
+}
+.block8{
+    background:url(../img/tec08.png) no-repeat center;
+}
+.block9{
+    background:url(../img/tec09.png) no-repeat center;
+}
+.block10{
+    background:url(../img/tec10.png) no-repeat center;
+}
+.block11{
+    background:url(../img/tec11.png) no-repeat center;
+}
+.block12{
+    background:url(../img/tec12.png) no-repeat center;
+}
+.block13{
+    background:url(../img/tec13.png) no-repeat center;
+}
+.block14{
+    background:url(../img/tec14.png) no-repeat center;
+}
+.block15{
+    background:url(../img/tec15.png) no-repeat center;
+}
+
+/*------------hover period1-------------*/
+
+
+
+/*-----------hover period2------------*/
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        /* 
+        참조형 데이터(항목이 많은 아이들)
+        1. array 배열 [...] 리스트로 된 데이터 덩어리
+        let flower=[장비꽃, 배꽃, ...]
+
+        2. object 객체
+        옵션과 아이템이 많은 데이터 덩어리
+        let 강아지={
+            이름: 귀동이,
+            색상: 오렌지색,
+            종: 재패니즈 친,
+            나이 : 6,
+            짖다: function(){return '왈왈'}
+        }
+        */
+        console.log(location);
+
+        let dog={
+            name:'똘이',
+            height:60,
+            weight:10,
+            color:'#000',
+            cute:true,
+            lovely:true,
+            happy:function(){console.log('멍멍')},
+            feed:function(a){console.log(`강아지가 ${a}을(를) 맛있게 먹습니다.`)}
+        }
+        dog.happy();
+        dog.feed('고기');
+        console.log(dog.name);
+    </script>
+</body>
+</html>

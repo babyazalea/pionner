@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>bxSlider</title>
+        <style>
+            .box{
+                width:300px;
+                height:350px;
+            }
+            .box1{
+                background-color:#000;
+            }
+            .box2{
+                background-color:#333;
+            }
+            .box3{
+                background-color:#666;
+            }
+            .box4{
+                background-color:#aaa;
+            }
+            .box5{
+                background-color:#ddd;
+            }
+            .pager a.active{
+                color:red;
+            }
+            #ctrl button{
+                position:relative;
+            }
+            #ctrl button a{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box box1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+        </div>
+        
+        <div id="ctrl">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div>
+        
+        <div class="pager">
+            <a href="#" data-slide-index="0">box1</a>
+            <a href="#" data-slide-index="1">box2</a>
+            <a href="#" data-slide-index="2">box3</a>
+            <a href="#" data-slide-index="3">box4</a>
+            <a href="#" data-slide-index="4">box5</a>
+        </div>
+        <!--
+            1. div안에 a로 버튼을 만듬
+            2. pagerCustom 옵션을 사용하여 div 연결
+            3. div 내부의 각각의 a에게 data-slide-index 옵션을 사용하여 할당된 슬라읻의 인덱스 값을 연결해준다
+            4. pager 버튼 활성화 된 것 커스텀하기: a.active 클래스를 사용하여 원하는 css값을 넣는다.
+            
+            -----------------------
+            
+            prev next / stop play -> 컨트롤러
+            
+            1. nextSelector, prevSelector 옵션으로 버튼이 될 대상을 지정.
+            2. prevText, nextText 옵션을 이용해 텍스트를 추가 변경 혹은 제거한다.
+            3. 1번에서 입력한 선택자 안에 생성된 a태그(.bx-prev , .bx-next)를 css로 커스텀하여 원하는 형태로 만든다. 
+        -->
+        
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.bxslider.min.js"></script>
+        <script>
+            $('.container').bxSlider({
+                //'mode':'fade' 상태에서는 캐러셀 작동 불가.
+                'minSlides':3,
+                //최소 너비값일 때 보일 슬라이드 개수
+                'maxSlides':3,
+                //최소 너비값 이상의 너비값일때 보일 슬라이드 개수의 최대값
+                'slideWidth':300,
+                //캐러셀 아이템들 너비값
+                'moveSlides':1,
+                //한번에 움직일 아이템의 개수
+                'slideMargin':30,
+                //아이템 간의 사이 간격.(css에서 주지 말고 이 옵션 사용해서 넣을 것)
+                'pagerCustom':'.pager',
+                'nextSelector':'#ctrl .next',
+                'prevSelector':'#ctrl .prev',
+                'prevText':'',
+                'nextText':''
+            });
+        </script>
+    </body>
+</html>

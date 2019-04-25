@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>0226 복습</title>
+    </head>
+    <body>
+        <script>
+            var size= prompt('당신의 사이즈는?');
+            //prompt로 입력받는 데이터 값은 기본적으로 문자형 데이터입니다.
+            var result;
+            if(size>=220 && size<=250){
+                result= '재고가 있습니다!';
+            }else if(size>=255 && size<=265){
+                result= '주문 가능합니다.';
+            }else if(size<220 || size>=270){
+                result= '판매하지 않는 사이즈입니다.'
+            }
+            
+            alert(result);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>조건 비교 연산자</title>
+        <style>
+            /*
+            white-space : 텍스트의 공백 처리를 제어
+            (normal: 기본값
+            nowrap: 텍스트의 영역과 상관 없이 텍스트를 진행
+            pre: 코드 상의 줄바꿈 및 공백 처리를 그대로 출력
+            )
+            */
+        </style>
+    </head>
+    <body>
+        <!--
+        white-spacing 옵션
+        -->
+        <pre>
+            비교연산자
+            >,< 크다, 작다
+            >=, <= 크거나 같다, 작거나 같다
+            (등호와 부등호의 순서가 절대 바뀌어선 안 된다.)
+            
+            == 같다 (등호를 두 개)
+            ->두 개의 값을 비교하되, 데이터의 형태는 신경쓰지 않는다.
+            "123" == 123  -> true
+            
+            === 두 개의 값만 비교하는 게 아니라, 데이터의 형태까지 비교한 다음
+                데이터의 형태까지 모두 일치할 경우 true
+                하나라도 틀리면 false.
+                
+            != 다르다
+            ->데이터 형태는 제외하고 안에 들어있는 값만 비교해서 다른지 같은지를 체크.
+            
+            !== 다르다2
+            ->데이터 형태까지 비교한 후 하나라도 다르면 true.
+            
+            (자바스크립트에서의 !는 부정의 의미)
+            var x= true;
+                x= !x;
+                    ->false
+            
+            
+        </pre>
+        <script>
+            var a= 10;
+            var b= 14;
+            document.write(a>b);
+            document.write(a<b);
+            //비교연산자: 두 개의 피항연산자를 가진다. (a와 b)
+            //비교연산구문은 반드시 둘 중 하나의 답을 가진다. true 와 false.
+            
+            var c= 123;
+            var d= "123";
+            var e= 123;
+            
+            document.write((c===d)+'<br>');
+            
+            document.write(c!==d);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>if1</title>
+    </head>
+    <body>
+        <script>
+            var a= 30;
+            //if 조건문
+            
+            /*if(비교식){
+                비교식이 참일 때 실행될 내용들.
+            }else{
+            비교식이 거짓일 때 실행.*/
+            
+            }
+            if(a<50){
+                document.write('a가 50보다 작습니다.')
+            }
+            
+            var size= 240;
+            if(size<260){
+                document.write('<br>재고가 있습니다.')
+            }
+            
+            //prompt() 질의 응답 창을 띄움.
+            var b= prompt('당신의 신발사이즈는?');
+            document.write(b+'<br>');
+            if(b>240){
+                document.write('재고가 없습니다')
+            }
+            
+            if(240<b || 220>b){
+                document.write('재고가 없습니다.')
+            }else{
+                document.write('재고가 있습니다.')
+            }
+        </script>
+    </body>
+</html>

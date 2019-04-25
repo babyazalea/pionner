@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>menu2</title>
+        <style>
+            *{
+                margin:0;
+                padding:0;
+                list-style:none;
+                color:inherit;
+                text-decoration:none;
+            }
+            header{
+                width:100%;
+                height:350px;
+                background-color:lightcoral;
+                position:relative;
+            }
+            header h1{
+                text-align:center;
+                padding-top:80px;
+            }
+            header #gnb{
+                width:600px;
+                position:absolute;
+                left:50%;
+                margin-left:-300px;
+                bottom:8px;
+            }
+            header #gnb li{
+                width:20%;
+                float:left;
+                text-align:center;
+                font-size:18px;
+            }
+            .menu_box{
+                position:absolute;
+                width:650px;
+                top:350px;
+                left:50%;
+                margin-left:-325px;
+                border:2px solid #ccc;
+            }
+            .sub{
+                width:100%;
+                height:200px;
+                border:1px solid #000;
+                box-sizing:border-box;
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1><a href="#">logo</a></h1>
+            <ul id="gnb">
+                <li><a href="#">list1</a></li>
+                <li><a href="#">list2</a></li>
+                <li><a href="#">list3</a></li>
+                <li><a href="#">list4</a></li>
+                <li><a href="#">list5</a></li>
+            </ul>
+            <div class="menu_box">
+                <div class="sub">
+                    <ul>
+                        <li>submenu1-1</li>
+                        <li>submenu1-2</li>
+                        <li>submenu1-3</li>
+                        <li>submenu1-4</li>
+                    </ul>
+                </div>
+                <div class="sub">
+                    <ul>
+                        <li>submenu2-1</li>
+                        <li>submenu2-2</li>
+                        <li>submenu2-3</li>
+                        <li>submenu2-4</li>
+                    </ul>
+                </div>
+                <div class="sub">
+                    <ul>
+                        <li>submenu3-1</li>
+                        <li>submenu3-2</li>
+                        <li>submenu3-3</li>
+                        <li>submenu3-4</li>
+                    </ul>
+                </div>
+                <div class="sub">
+                    <ul>
+                        <li>submenu4-1</li>
+                        <li>submenu4-2</li>
+                        <li>submenu4-3</li>
+                        <li>submenu4-4</li>
+                    </ul>
+                </div>
+                <div class="sub">
+                    <ul>
+                        <li>submenu5-1</li>
+                        <li>submenu5-2</li>
+                        <li>submenu5-3</li>
+                        <li>submenu5-4</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <script src="js/jquery-3.3.1.min.js">
+        </script>
+        
+        <script>
+            /*
+                1. li에게 mouseover
+                2. 마우스 올라간 li의 인덱스값 도출
+                3. .menu_box 안의 .sub들 중 li의 인덱스 값과 같은 인덱스 값을 가진 .sub 찾아 slideDown
+                
+            */
+            
+            $('#gnb li, .sub').on('mouseover',function(){
+                var i=$(this).index();//인덱스 값 도출해서 변수 i에 저장.
+                $('.menu_box .sub').eq(i).stop().slideDown().siblings().hide();
+            }).on('mouseout',function(){
+                $('.menu_box .sub').stop().slideUp();
+            });
+        </script>
+    </body>
+</html>

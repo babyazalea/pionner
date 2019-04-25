@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>array배열</title>
+        <style>
+            .con{
+                background-color:#eee;
+            }
+            
+            .con .box{
+                width:200px;
+                height:200px;
+                border:4px solid #000;
+                margin:40px auto;
+            }
+        </style>
+    </head>
+    <body>
+        <pre>
+            () -> 실행, 실행과 관련된 직접적인 것.
+            {} -> 구문들을 묶어주는 주머니 역할(코드블록).
+            [] -> 배열, 순번과 관련된 것
+            
+            자바스크립트의 인덱스index
+            순번, 0부터 시작한다.
+        </pre>
+        <div class="con">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <script>
+            /*
+            1. 하나의 배열 데이터 안에 다양한 형태의 데이터를 넣을 수 있다
+            ['데이지', 30, true, '야호']
+            
+            2.하나의 배열 데이터 안에는 관련 있는 데이터만 집어넣을 것.
+            var 중국집=['짜장면', '짬뽕', '팔보채', '탕수육', '슈크림']
+            ->유지 및 보수가 어렵고 작동 원리에 반하므로.
+            
+            
+            */
+            var bg=['red', 'yellow', 'blue', 'black', 'white']
+            var box=document.getElementsByClassName('box');
+            
+            for(i=0; i<bg.length; i++){
+                box[i].style.backgroundColor=bg[i];
+            }
+            
+            
+            var a=['바둑이', '영희', '철수', '정미', '미영', '광우', '뽀삐'];
+            /*document.write(a[3]);
+            document.write(a[5]);*/
+            for(var i=1; i<=7; i++){
+                document.write(i+'.'+a[i-1]+'<br>');
+            }
+            
+            var flower=['장미', '안개꽃', '개나리', '진달래', '히아신스'];
+                                //ㅁㅁㅁ.length 배열 데이터의 개수
+            for(var i=0; i<flower.length; i++){
+                document.write((i+1)+'.'+flower[i]+'<br>');
+            }
+        </script>
+    </body>
+</html>

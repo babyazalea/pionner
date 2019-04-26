@@ -1,37 +1,9 @@
 const toggle=document.querySelector('.toggle'),
-    btnBasic=toggle.querySelector('.politicBasic'),
-    btnLeft=toggle.querySelector('.politicLeft'),
-    btnRight=toggle.querySelector('.politicRight');
+    rangeForm=toggle.querySelector('form'),
+    slider=rangeForm.querySelector('input');
 
+    slider.oninput = handleInput;
 
-
-
-
-function dragEnd(){
-    btnBasic.onmouseup= null;
-    btnBasic.onmousemove=null;
-}
-
-function btnReadyToMovin(e){
-    const currentCursor = e.offsetX;
-    
-    btnBasic.onmousemove = btnDrag();
-    console.log(btnLeft + 'btn');
-    
-    
-    
-    function btnDrag(){
-        
-    btnBasic.style.left = currentCursor +"px";
-        
-        btnBasic.onmouseup= dragEnd;
+    function handleInput(e){
+        const currentValue = e.target.value;
     }
-}
-
-function btnCapture(e){
-    
-    toggle.onmousedown = btnReadyToMovin;
-    
-}
-
-btnCapture();

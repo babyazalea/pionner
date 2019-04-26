@@ -4,8 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
 
 .wrap{
-    width:960px;
-    margin:0 auto;
+   
 }
 
 /*-----------------main----------------*/
@@ -15,28 +14,26 @@
 header{
     width:100%;
     height:150px;
-    
-}
-header .wrap{
     position: relative;
 }
+
+.headerLeft{
+    position: absolute;
+    left:13%;
+    top:50%;
+    transform: translateY(-50%);
+}
 .title{
-    position:relative;
+    
     display:block;
-    width:250px;
-    height:65px;
-    line-height:150px;
+    width:auto;
 }
 .titleEng{
-    position:absolute;
-    top:65px;
     font-family:Bungee;
     font-size:50px;
-    opacity:1;
-    transition:all 1.5s;
-    line-height:0;
+    text-shadow: 3px 3px 5px #ccc;
 }
-.titleKor{
+/* .titleKor{
     position:absolute;
     top:70px;
     font-family:Black Han Sans;
@@ -51,62 +48,52 @@ header .wrap{
 }
 .title:hover .titleEng{
     opacity:0;
-}
-
-/* .toggle{
-    position: relative;
-    right:-700px;
-    
-}
-.toggle>div{
-    
-}
-.toggleBg{
-    width:300px;
-    height:30px;
-    border:1px solid #000;
-    border-radius: 10px;
-    top:50%;
-    transform: translateY(-50%);
-    position: absolute;
-    left:-130px;
-    overflow: hidden;
-    z-index: -999;
-}
-.toggleBtn{
-    font-size:50px;
-    border-radius: 10px;
-    position:absolute;
-    overflow: hidden;
-}
-.toggleBtn i{
-    padding-right: 100px;
-    box-sizing: border-box;
-    z-index: 999;
-}
-.toggleBgLeft{
-    float:left;
-    height:100%;
-    width:50%;
-    background:red;
-}
-.toggleBgRight{
-    float:right;
-    width:50%;
-    height:100%;
-    background:blue;
 } */
 
-.newToggle{
+.headerRight{
     position: absolute;
-    right:0;
+    right:13%;
     top:50%;
     transform: translateY(-50%);
 }
+ .toggle{
+    
+    
+}
+/*    
+}
+.toggle i{
+    position: absolute;
+    font-size:40px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:#f5f6fa;
+    cursor: pointer;
+    transition:all 0.5s;
+}
+.toggle i.politicCenter{
+    opacity: 1;
+}
+.toggle i.politicLeft{
+    display:none;
+}
+.toggle i.politicRight{
+    display:none;
+}
+.toggle i:hover{
+    color:#fdcb6e;
+} */
 
 .mainVisual{
-    height:600px;
+    margin-top:30px;
     width:960px;
+    height:600px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 10px 10px 25px #ccc;
 }
 
 .block{
@@ -114,7 +101,7 @@ header .wrap{
     width:192px;
     height:200px;
     float:left;
-    box-shadow:0 0 30px rgba(0, 0, 0, 0.2);
+    
 }
 .block5, .block15, .block10{
     margin-right:0;

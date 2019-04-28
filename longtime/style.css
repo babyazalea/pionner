@@ -1,8 +1,10 @@
 @charset 'utf-8';
-@import url('https://fonts.googleapis.com/css?family=Poor+Story');
+@import url('https://fonts.googleapis.com/css?family=Gugi');
 
 body{
-    font-family: Poor Story;
+    font-family:Gugi;
+    background-image:url(https://source.unsplash.com/1600x900/?couple);
+    background-size:cover;
 }
 input{
     border:none;
@@ -20,17 +22,36 @@ p{
     left:50%;
     top:50%;
     transform: translate(-50%,-50%);
+    width:500px;
+    height:500px;
+    
 }
-
-h2{
+.background{
+    background:rgba(255,255,255,0.5);
+    width:100%;
+    height:100%;
+    position: relative;
+}
+.container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
     text-align: center;
+}
+h2{
+    
     font-weight: normal;
 }
 form{
-    text-align: center;
+    
+}
+.userName{
+   
 }
 .greeting{
     text-align:center;
+    display:none;
 }
 .mateName{
     
@@ -54,6 +75,12 @@ form{
     text-align: center;
     color:#000;
     font-size:20px;
+}
+.js-couple{
+    display:none;
+}
+.js-days{
+    display: none;
 }
 
 .showing{

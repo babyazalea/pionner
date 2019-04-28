@@ -28,6 +28,7 @@ const USER_LS="currentUser",
     let secondPhase=function(text){
         firstForm.classList.remove(SHOWING);
         secondForm.classList.add(SHOWING);
+        greeting.classList.add(SHOWING);
         greeting.innerText=`반갑습니다, ${text}님.`
         
         let yesMate= function(){
@@ -60,16 +61,18 @@ const USER_LS="currentUser",
         saveMate(currentValue);
         printCouple();
         thirdForm.classList.remove(SHOWING);
-        greeting.classList.add(HIDING);
+        greeting.classList.remove(SHOWING);
         askDate();
     }
     let printCouple= function(){
         let you=localStorage.getItem(USER_LS),
             mate=localStorage.getItem(USERMATE_LS);
+        couple.classList.add(SHOWING);
         couple.innerText=`${mate} ♥ ${you}`
     }
 
     let thirdPhase=function(){
+        greeting.classList.remove(SHOWING);
         secondForm.classList.remove(SHOWING);
         thirdForm.classList.add(SHOWING);
         thirdForm.addEventListener('submit',mateSubmit);
@@ -96,9 +99,10 @@ const USER_LS="currentUser",
             gap=nowDate - firstDate;
 
         let day=Math.floor((gap/(1000*60*60*24))+1);
+        days.classList.add(SHOWING);
         days.innerText=`오늘은 우리가 만난지 ${day}일`;
         reDoBtn.classList.add(SHOWING);
-        
+        reDo();
         
         
     }
@@ -134,7 +138,6 @@ const USER_LS="currentUser",
     else{
         printCouple();
         howLong();
-        reDo();
     }
     
 }

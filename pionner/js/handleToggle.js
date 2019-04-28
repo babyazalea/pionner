@@ -2,8 +2,8 @@ const toggle=document.querySelector('.toggle'),
     rangeForm=toggle.querySelector('form'),
     slider=rangeForm.querySelector('input');
 
-    slider.oninput = handleInput;
+    slider.oninput = handlingInput;
 
-    function handleInput(e){
+    function handlingInput(e){
         const currentValue = e.target.value;
     }

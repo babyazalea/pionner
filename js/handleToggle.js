@@ -6,4 +6,7 @@ const toggle=document.querySelector('.toggle'),
 
     function handlingInput(e){
         const currentValue = e.target.value;
+        console.log(currentValue);
     }
+
+    
